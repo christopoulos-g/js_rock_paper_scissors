@@ -7,12 +7,9 @@ function computerPlay(){
     return result;
 }
 
-
-function playerPlay(){
-
-}
 function playRound(playerSelection, computerSelection){
     let result= "";
+    
     console.log(playerSelection, computerSelection);
     
     if(computerSelection == "rock" && playerSelection == "rock"){
@@ -46,7 +43,10 @@ function playRound(playerSelection, computerSelection){
     }    
 }   
 
-const playerSelection = "rock";
+let input = prompt("Rock, paper or scissors. Pick one!");
+let playerSelection = input.toLowerCase();
+alert(`Your choice was ${playerSelection}.`)
+
 const computerSelection = computerPlay();
 
 console.log(playRound(playerSelection, computerSelection));
