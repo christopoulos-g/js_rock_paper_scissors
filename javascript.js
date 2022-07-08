@@ -4,6 +4,7 @@ const scissorsBtn = document.getElementById("scissors_btn");
 const roundResult = document.getElementById("round_result");
 const gameResult = document.getElementById("game_result");
 const score = document.getElementById("score");
+const computer_output = document.getElementById("computer_choice");
 
 let p_score = 0;  /* c_score means computer wins . p_score means player wins . */
 let c_score = 0;
@@ -74,6 +75,7 @@ function game(selection){
     const computerSelection = computerPlay();
     let playerSelection = selection;
     let result = playRound(playerSelection,computerSelection);
+    
 
     if(result == "Player wins this round!"){
         p_score++;
@@ -82,6 +84,7 @@ function game(selection){
     }
     score.textContent = p_score + ' + ' + c_score;
     roundResult.textContent = result ;
+    computer_output.textContent = 'Enemy picked ' + computerSelection;
 
     if(gameOver(p_score,c_score) === true){
         if(p_score > c_score){

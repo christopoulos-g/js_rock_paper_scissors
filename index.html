@@ -5,17 +5,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Rock Paper Scissors</title>
         <script src="javascript.js" defer></script>
-
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="cointaner_btn">
-            <button id="rock_btn">Rock</button>
-            <button id="paper_btn">Paper</button>
-            <button id="scissors_btn">Scissors</but>
+        <div class="title_header_container">
+            <div id="title">ROCK PAPER SCISSORS!</div>
+            <div id="title_quote">"Don't get mad, but we can all agree, there is no such thing as pencil in this game..."</div>
+            <div id="title_quote_ath">- 99% of people in this planet</div>
         </div>
-        <div class ="results">
-            <p id="round_result"></p>
-            <p id="score"></p>
-            <h1 id="game_result"></h1>
+
+        <div class="container_btn_scr">
+            <div class ="results">
+                <div id="game_result"></div>
+                <div id="round_result"></div>
+                <div id="score"></div>
+            </div>
+            
+            <div class="buttons_container">
+                <button id="rock_btn">Rock</button>
+                <button id="paper_btn">Paper</button>
+                <button id="scissors_btn">Scissors</but>
+            </div>
+            
+            <div id="computer_choice"></div>
         </div>
+
+        <div class="footer">
+            <p>© Grigorios Christopoulos @ GitHub</p>
+        </div>
+    
     </body>

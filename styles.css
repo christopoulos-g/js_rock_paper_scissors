@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: 'Indie Flower', cursive;
+    width: 100%
+}
+
+.title_header_container{
+    display: flex;
+    background-color: rgb(73, 73, 73);
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding-top: 5%;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-bottom: 2%;
+}
+
+#title{
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 40px;
+    outline: yellow solid 5px;
+    outline-offset: 12px;
+    border-radius: 10px;
+    color: white;
+}
+
+#title_quote{
+    font-style:italic;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#title_quote_ath{
+    font-size: 16px;
+    display: flex;
+    align-self: flex-end;
+    margin-right: 10%;
+    color: rgba(255, 255, 255, 0.774);
+}
+
+.container_btn_scr{
+    display: flex;
+    background-color: rgb(100, 100, 100);
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding-top: 4%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 28%;
+    
+}
+
+.buttons_container{
+    display: flex;
+    flex-direction: row;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    color: white;
+    font-weight: 800;
+}
+
+#score {
+    display: flex;
+    align-self: flex-end;
+}
+
+.rock_btn{
+    background: yellow;
+    border: none;
+    color: yellow;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+
+    font-size: 16px;
+  }
