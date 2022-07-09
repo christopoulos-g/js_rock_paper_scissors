@@ -10,16 +10,26 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     </head>
+
     <body>
+        <div id="overlay_after" class="overlay">
+            <div class="overlay_content">
+                <div id="overlay_text"></div>
+                <div id="restart_text"></div>
+                <div class="image_con">
+                    <img class="restart_game" src="./images/restart.png" onclick="restartGame()"></img>
+                </div>      
+            </div>
+        </div>
+
         <div class="title_header_container">
             <div id="title">ROCK PAPER SCISSORS!</div>
-            <div id="title_quote">"Don't get mad, but we can all agree, there is no such thing as pencil in this game..."</div>
-            <div id="title_quote_ath">- 99% of people in this planet</div>
+            <div id="title_quote">"We can all agree, there is no such thing as pencil in this game..."</div>
+            <div id="title_quote_ath">- 99% of people on this planet</div>
         </div>
 
         <div class="container_btn_scr">
             <div class ="results">
-                <div id="game_result"></div>
                 <div id="round_result">&zwnj;</div> <!-- zwnj zero-width joiner as a placeholder -->
                 <div id="score">Pick and choose : </div>
             </div>
@@ -40,5 +50,4 @@
         <div class="footer">
             <p>© Grigorios Christopoulos @ GitHub</p>
         </div>
-    
     </body>
