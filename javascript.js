@@ -5,6 +5,7 @@ const roundResult = document.getElementById("round_result");
 const gameResult = document.getElementById("game_result");
 const score = document.getElementById("score");
 const computer_output = document.getElementById("computer_choice");
+const player_output = document.getElementById("player_choice");
 
 let p_score = 0;  /* c_score means computer wins . p_score means player wins . */
 let c_score = 0;
@@ -82,10 +83,10 @@ function game(selection){
     }else if(result == "Computer wins this round!"){
         c_score++;
     }
-    score.textContent = p_score + ' + ' + c_score;
+    score.textContent = "Score is : " + p_score + ' - ' + c_score + ' !';
     roundResult.textContent = result ;
-    computer_output.textContent = 'Enemy picked ' + computerSelection;
-
+    computer_output.textContent = 'The enemy picked ' + computerSelection + '!';
+    player_output.textContent = 'You picked ' + playerSelection + '!';
     if(gameOver(p_score,c_score) === true){
         if(p_score > c_score){
             gameResult.textContent = "You are the winner!";
@@ -101,6 +102,7 @@ function game(selection){
 TODO 
 - ENHANCE CSS STYLES / HTML
 - RESTART GAME SETTING
-- FOOBAR GIT 
+- FOOBAR GIT
 - AT 5 POINTS DISPLAY WINNER WINDOW WITH PLAY AGAIN OR QUIT(WITH UNRESPONSIVE CONTROLS)
+- animations hover and sound
 */
