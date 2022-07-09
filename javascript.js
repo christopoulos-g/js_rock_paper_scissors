@@ -6,10 +6,23 @@ const gameResult = document.getElementById("game_result");
 const score = document.getElementById("score");
 const computer_output = document.getElementById("computer_choice");
 const player_output = document.getElementById("player_choice");
+let audioWin = new Audio('./sounds/win.mp3')
+let audioLose = new Audio('./sounds/lose.mp3')
+let audioClick = new Audio('./sounds/click.mp3')
+let audioHover = new Audio('./sounds/hover.mp3')
 
 let p_score = 0;  /* c_score means computer wins . p_score means player wins . */
 let c_score = 0;
 
+rockBtn.addEventListener('mouseenter',function(){
+    audioHover.play();
+});
+paperBtn.addEventListener('mouseenter',function(){
+    audioHover.play();
+});
+scissorsBtn.addEventListener('mouseenter',function(){
+    audioHover.play();
+});
 
 rockBtn.addEventListener('click', function() {
     game('rock');
@@ -72,7 +85,7 @@ function gameOver(p_score,c_score){
 
 
 function game(selection){
-
+    audioClick.play();
     const computerSelection = computerPlay();
     let playerSelection = selection;
     let result = playRound(playerSelection,computerSelection);
@@ -80,8 +93,12 @@ function game(selection){
 
     if(result == "Player wins this round!"){
         p_score++;
+        roundResult.style.color = "#adff2f";
     }else if(result == "Computer wins this round!"){
         c_score++;
+        roundResult.style.color = "#f04a4a";
+    }else{
+        roundResult.style.color = "#bebebe";
     }
     score.textContent = "Score is : " + p_score + ' - ' + c_score + ' !';
     roundResult.textContent = result ;
@@ -90,8 +107,10 @@ function game(selection){
     if(gameOver(p_score,c_score) === true){
         if(p_score > c_score){
             gameResult.textContent = "You are the winner!";
+            audioWin.play();
         }else {
             gameResult.textContent = "You lost..";
+            audioLose.play();
         }
     }
     return;
@@ -101,6 +120,5 @@ function game(selection){
 /* STABLE FULL WORKING JS.
 TODO 
 - RESTART GAME SETTING
-- AT 5 POINTS DISPLAY WINNER WINDOW WITH PLAY AGAIN OR QUIT(WITH UNRESPONSIVE CONTROLS)
-- animations hover and sound
+- AT 5 POINTS DISPLAY WINNER WINDOW WITH PLAY AGAIN OR QUIT(WITH UNRESPONSIVE CONTROLS) 
 */

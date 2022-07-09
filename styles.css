@@ -1,4 +1,6 @@
 body {
+    height: 100%;
+    width: 100%;
     margin: 0;
     font-family: 'Indie Flower', cursive;
     width: 100%
@@ -6,7 +8,7 @@ body {
 
 .title_header_container{
     display: flex;
-    background-color: rgb(73, 73, 73);
+    background-color: #494949;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -14,11 +16,10 @@ body {
     padding-top: 2%;
     padding-left: 25%;
     padding-right: 25%;
-    padding-bottom: 2%;
+    padding-bottom: 1%;
 }
 
 #title{
-    margin-top: 0px;
     margin-bottom: 30px;
     font-weight: 800;
     font-size: 40px;
@@ -33,7 +34,7 @@ body {
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 10px;
-    color: white;
+    color: #ffffff;
 }
 
 #title_quote_ath{
@@ -41,7 +42,7 @@ body {
     display: flex;
     align-self: flex-end;
     margin-right: 10%;
-    color: rgba(255, 255, 255, 0.774);
+    color: #ffffffc5;
 }
 
 .container_btn_scr{
@@ -55,7 +56,6 @@ body {
     padding-left: 150px;
     padding-right: 150px;
     padding-bottom: 150px;
-    
 }
 
 
@@ -63,7 +63,7 @@ body {
 .results {
     display: flex;
     flex-direction: column;
-    color: white;
+    color: #ffffff;
     font-weight: 800;
     align-items: center;
     justify-content: center;
@@ -83,16 +83,16 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: space-evenly;
-    margin: 40px;
+    margin: 20px;
     width: 45%;
     flex: 1;
 }
 
 #rock_btn, #paper_btn, #scissors_btn{
-    background: yellow;
-    border: 4px solid black;
+    background: #ffff00;
+    border: 4px solid #000000;
     border-radius: 15px;
-    color: black;
+    color: #000000;
     width: 23%;
     padding: 10%;  
     display: flex;
@@ -101,7 +101,7 @@ body {
     text-align: center;
     text-decoration: none;
     font-size: 200%;
-    transition: width 0.75s;
+    transition: width 0.25s;
     transition-timing-function: ease;
     cursor:pointer;
 }
@@ -112,7 +112,7 @@ body {
 
 .choices_container{
     display: flex;
-    margin-top: 100px;
+    margin-top: 50px;
     flex-direction: row;
     width: 50%;
     justify-content:space-between;
@@ -122,20 +122,19 @@ body {
 }
 
 #player_choice {
-    color: rgb(247, 247, 52);
+    color: #f7f734;
 }
 
 #computer_choice{
-    color: rgb(253, 89, 89);
-}
+    color: #fd5959;
 }
 
 .footer{
     display:flex;
     position: fixed;
     width: 100%;
-    background-color: rgb(26, 26, 26);
-    color: white;
+    background-color: #1a1a1a;
+    color: #ffffff;
     text-align: center;
     bottom: 0px;
     justify-content: center;
